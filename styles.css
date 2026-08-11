@@ -645,8 +645,8 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
 .case__hero {
   min-height: 480px;
   background:
-    radial-gradient(600px 400px at 30% 40%, rgba(255,230,190,0.28), transparent 55%),
-    linear-gradient(135deg, #efe6d7 0%, #c9a67f 45%, #6b4a2e 100%);
+    linear-gradient(120deg, rgba(20,15,10,0.05) 0%, transparent 50%),
+    url("assets/case-huang/web/page-09.jpg") center/cover no-repeat, #efe6d7;
   position: relative;
 }
 .case__hero::after {
@@ -729,14 +729,15 @@ html[lang="zh-CN"] .case__facts dd { font-family: var(--serif-cn); }
 }
 html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: normal; }
 
-.room__img--foyer    { background: linear-gradient(135deg, #f2e9d7 0%, #cfb590 60%, #7d6242 100%); }
-.room__img--kitchen  { background: linear-gradient(135deg, #f6ede0 0%, #d0b58c 55%, #8a6a44 100%); }
-.room__img--dining   { background: linear-gradient(135deg, #f0e4d1 0%, #d38856 55%, #7d4526 100%); }
-.room__img--living   { background: linear-gradient(135deg, #ede4d3 0%, #b7a082 55%, #6b5942 100%); }
-.room__img--corridor { background: linear-gradient(135deg, #e8ddc7 0%, #a08a68 55%, #4d3f2b 100%); }
-.room__img--hall     { background: linear-gradient(135deg, #efe6d4 0%, #b09876 55%, #5c4a34 100%); }
-.room__img--master   { background: linear-gradient(135deg, #eae1cf 0%, #a8927a 55%, #574734 100%); }
-.room__img--bath     { background: linear-gradient(135deg, #ece7dc 0%, #b8ac97 55%, #6b6250 100%); }
+.room__img { background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #efe6d7; }
+.room__img--foyer    { background-image: url("assets/case-huang/web/page-05.jpg"); }
+.room__img--kitchen  { background-image: url("assets/case-huang/web/page-06.jpg"); }
+.room__img--dining   { background-image: url("assets/case-huang/web/page-07.jpg"); }
+.room__img--living   { background-image: url("assets/case-huang/web/page-09.jpg"); }
+.room__img--corridor { background-image: url("assets/case-huang/web/page-11.jpg"); }
+.room__img--hall     { background-image: url("assets/case-huang/web/page-12.jpg"); }
+.room__img--master   { background-image: url("assets/case-huang/web/page-13.jpg"); }
+.room__img--bath     { background-image: url("assets/case-huang/web/page-16.jpg"); }
 
 @media (max-width: 1000px) {
   .case__head { grid-template-columns: 1fr; }

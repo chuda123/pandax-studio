@@ -1,1 +1,5 @@
+.DS_Store
 .vercel
+node_modules
+# Original high-res PDF extractions — only web-optimized versions committed
+assets/case-huang/page-*.png
