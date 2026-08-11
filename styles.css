@@ -630,6 +630,124 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
   .project--wide { grid-column: span 1; }
 }
 
+/* ---------- Case Study (Featured Project) ---------- */
+.case {
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+}
+.case__head {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.case__hero {
+  min-height: 480px;
+  background:
+    radial-gradient(600px 400px at 30% 40%, rgba(255,230,190,0.28), transparent 55%),
+    linear-gradient(135deg, #efe6d7 0%, #c9a67f 45%, #6b4a2e 100%);
+  position: relative;
+}
+.case__hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(0,0,0,0.15) 100%);
+}
+.case__intro {
+  padding: clamp(40px, 5vw, 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.case__tag {
+  font-size: 11px; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.case__title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.1;
+}
+html[lang="zh-CN"] .case__title { font-family: var(--serif-cn); }
+.case__subtitle {
+  color: var(--ink-2);
+  font-size: 16px;
+  max-width: 40ch;
+}
+.case__facts {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.case__facts dt {
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 4px;
+}
+.case__facts dd {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+}
+html[lang="zh-CN"] .case__facts dd { font-family: var(--serif-cn); }
+
+.case__rooms {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+}
+.room {
+  background: #fff;
+  padding: 0 0 26px;
+  display: flex; flex-direction: column;
+}
+.room__img {
+  aspect-ratio: 4/3;
+  margin-bottom: 22px;
+  transition: transform .5s ease;
+}
+.room:hover .room__img { transform: scale(1.015); }
+.room__label {
+  font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 26px 8px;
+}
+.room__quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 26px;
+}
+html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: normal; }
+
+.room__img--foyer    { background: linear-gradient(135deg, #f2e9d7 0%, #cfb590 60%, #7d6242 100%); }
+.room__img--kitchen  { background: linear-gradient(135deg, #f6ede0 0%, #d0b58c 55%, #8a6a44 100%); }
+.room__img--dining   { background: linear-gradient(135deg, #f0e4d1 0%, #d38856 55%, #7d4526 100%); }
+.room__img--living   { background: linear-gradient(135deg, #ede4d3 0%, #b7a082 55%, #6b5942 100%); }
+.room__img--corridor { background: linear-gradient(135deg, #e8ddc7 0%, #a08a68 55%, #4d3f2b 100%); }
+.room__img--hall     { background: linear-gradient(135deg, #efe6d4 0%, #b09876 55%, #5c4a34 100%); }
+.room__img--master   { background: linear-gradient(135deg, #eae1cf 0%, #a8927a 55%, #574734 100%); }
+.room__img--bath     { background: linear-gradient(135deg, #ece7dc 0%, #b8ac97 55%, #6b6250 100%); }
+
+@media (max-width: 1000px) {
+  .case__head { grid-template-columns: 1fr; }
+  .case__hero { min-height: 340px; }
+  .case__rooms { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .case__rooms { grid-template-columns: 1fr; }
+  .case__facts { grid-template-columns: 1fr; }
+}
+
 /* ---------- Signature (dark section rhythm) ---------- */
 .section__sub--light { color: rgba(255,255,255,0.65); }
 .sig-block { margin-top: clamp(60px, 8vw, 110px); max-width: var(--max); margin-left: auto; margin-right: auto; }
