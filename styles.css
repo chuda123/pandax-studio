@@ -634,7 +634,6 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
 .case {
   border: 1px solid var(--line);
   background: #fff;
-  overflow: hidden;
 }
 .case__head {
   display: grid;
@@ -698,34 +697,36 @@ html[lang="zh-CN"] .case__facts dd { font-family: var(--serif-cn); }
 
 .case__rooms {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1px;
   background: var(--line);
   border-top: 1px solid var(--line);
 }
 .room {
   background: #fff;
-  padding: 0 0 26px;
+  padding: 0 0 32px;
   display: flex; flex-direction: column;
 }
 .room__img {
-  aspect-ratio: 4/3;
-  margin-bottom: 22px;
+  aspect-ratio: 1/1;
+  margin-bottom: 24px;
   transition: transform .5s ease;
+  overflow: hidden;
 }
 .room:hover .room__img { transform: scale(1.015); }
 .room__label {
   font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
   color: var(--ink-3);
-  margin: 0 26px 8px;
+  margin: 0 28px 10px;
 }
 .room__quote {
   font-family: var(--serif);
   font-style: italic;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.65;
   color: var(--ink);
-  margin: 0 26px;
+  margin: 0 28px;
+  overflow: visible;
 }
 html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: normal; }
 
@@ -742,10 +743,8 @@ html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: norm
 @media (max-width: 1000px) {
   .case__head { grid-template-columns: 1fr; }
   .case__hero { min-height: 340px; }
-  .case__rooms { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
-  .case__rooms { grid-template-columns: 1fr; }
   .case__facts { grid-template-columns: 1fr; }
 }
 
