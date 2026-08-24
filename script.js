@@ -48,7 +48,7 @@ onScroll();
 
 // ---------- Reveal on scroll ----------
 const revealTargets = document.querySelectorAll(
-  ".section__head, .material, .craft__item, .compare__col, .door, .service, .system, .project, .case, .room, .process li, .sig-block, .pill-list li"
+  ".section__head, .material, .craft__item, .compare__col, .door, .service, .system, .project, .case, .room, .process li, .sig-block, .pill-list li, .lp-card, .lp-intro, .lp-list li, .lp-gallery__item, .lp-related a"
 );
 revealTargets.forEach((el) => el.classList.add("reveal"));
 

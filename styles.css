@@ -650,13 +650,16 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
 .system--dark { background: var(--dark); color: #fff; border-color: var(--dark); }
 
 .system__img {
+  display: block;
   min-height: 420px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--bg-soft);
   transition: transform .5s ease;
+  cursor: pointer;
 }
+.system__img:hover { opacity: 1; }
 .system:hover .system__img { transform: scale(1.01); }
 .system__img--hesheng   { background-image: url("assets/brands/web/hesheng.jpg"); }
 .system__img--youjubang { background-image: url("assets/brands/web/youjubang.jpg"); }
@@ -925,4 +928,199 @@ html[lang="zh-CN"] .process h4 { font-family: var(--serif-cn); }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* ============================================
+   Landing pages (systems/*)
+   ============================================ */
+.lp-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  color: #f5f3ee;
+  padding: 120px var(--pad) 80px;
+  background-color: #16181b;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%), var(--lp-hero-img);
+}
+.lp-hero__inner { max-width: var(--max); width: 100%; margin: 0 auto; }
+.lp-hero .eyebrow { color: rgba(245,243,238,.7); }
+.lp-hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(42px, 6.4vw, 88px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 16px 0 22px;
+  max-width: 14ch;
+}
+.lp-hero__lede {
+  max-width: 60ch;
+  color: rgba(245,243,238,.82);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.75;
+}
+
+.lp-section { padding: clamp(64px, 8vw, 120px) var(--pad); }
+.lp-section--soft { background: var(--bg-soft); }
+.lp-section--dark { background: var(--dark); color: #e9e7e0; }
+.lp-section--dark .h2 { color: #f5f3ee; }
+.lp-section--dark .section__sub { color: rgba(233,231,224,.7); }
+
+.lp-container { max-width: var(--max); margin: 0 auto; }
+
+.lp-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.lp-intro h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.lp-intro p {
+  color: var(--ink-2);
+  font-size: clamp(15px, 1.1vw, 16px);
+  line-height: 1.85;
+}
+.lp-intro p + p { margin-top: 1em; }
+@media (max-width: 860px) {
+  .lp-intro { grid-template-columns: 1fr; gap: 24px; }
+}
+
+.lp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+.lp-card {
+  background: var(--bg);
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--line);
+  transition: transform .4s ease, border-color .3s;
+}
+.lp-section--dark .lp-card {
+  background: var(--dark-2);
+  border-color: rgba(255,255,255,.08);
+  color: #e9e7e0;
+}
+.lp-card:hover { transform: translateY(-4px); border-color: var(--ink); }
+.lp-card__num {
+  font-family: var(--serif);
+  font-size: 32px;
+  color: var(--amber);
+  font-weight: 400;
+  display: block;
+  margin-bottom: 12px;
+}
+.lp-card__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.lp-card__desc {
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.lp-section--dark .lp-card__desc { color: rgba(233,231,224,.7); }
+
+.lp-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(12px, 1.4vw, 20px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.lp-gallery__item {
+  overflow: hidden;
+  background: var(--bg-soft);
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+}
+.lp-gallery__item--big  { grid-column: span 8; aspect-ratio: 16 / 10; }
+.lp-gallery__item--tall { grid-column: span 4; aspect-ratio: 4 / 5; }
+.lp-gallery__item--wide { grid-column: span 12; aspect-ratio: 21 / 9; }
+.lp-gallery__item--half { grid-column: span 6; }
+@media (max-width: 860px) {
+  .lp-gallery__item,
+  .lp-gallery__item--big,
+  .lp-gallery__item--tall,
+  .lp-gallery__item--wide,
+  .lp-gallery__item--half { grid-column: span 12; aspect-ratio: 4 / 3; }
+}
+
+.lp-related {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2vw, 28px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.lp-related a {
+  display: block;
+  padding: clamp(28px, 3.4vw, 44px);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  transition: background .3s, border-color .3s;
+}
+.lp-related a:hover { background: var(--dark); color: #f5f3ee; border-color: var(--dark); opacity: 1; }
+.lp-related__eyebrow { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
+.lp-related__title { font-family: var(--serif); font-size: clamp(24px, 2.6vw, 34px); font-weight: 400; }
+.lp-related__arrow { display: block; margin-top: 18px; font-size: 22px; }
+@media (max-width: 720px) { .lp-related { grid-template-columns: 1fr; } }
+
+.lp-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+}
+
+.lp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+.lp-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  align-items: baseline;
+}
+.lp-section--dark .lp-list li { border-color: rgba(255,255,255,.1); }
+.lp-list__label {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--amber);
+}
+.lp-list__text {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.75;
+}
+.lp-section--dark .lp-list__text { color: rgba(233,231,224,.75); }
+@media (max-width: 600px) {
+  .lp-list li { grid-template-columns: 1fr; gap: 8px; }
 }
