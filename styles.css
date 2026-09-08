@@ -129,7 +129,9 @@ html[lang="en"] .lang .lang__zh { opacity: .35; }
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background: url("assets/hero/main.jpg?v=4") center 45% / cover no-repeat;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%),
+    url("assets/hero/main.jpg?v=4") center 45% / cover no-repeat;
   z-index: -2;
 }
 .hero__bg::after {
@@ -1124,28 +1126,33 @@ html[lang="zh-CN"] .process h4 { font-family: var(--serif-cn); }
   .lp-list li { grid-template-columns: 1fr; gap: 8px; }
 }
 
-/* Hero — image full-bleed and crisp, text on a compact opaque card */
-.hero { align-items: center; }
+/* Hero — text overlaid directly on image, meerkathome-style */
+.hero {
+  align-items: flex-end;
+  color: #f5f3ee;
+  min-height: 92vh;
+}
 .hero__inner {
   position: relative;
   z-index: 1;
-  display: block;
-  max-width: 620px;
-  margin: 0;
-  width: auto;
-  padding: clamp(28px, 3.5vw, 52px);
-  background: rgba(245,243,238,0.94);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 24px 60px -30px rgba(0,0,0,0.25);
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.35);
 }
-.hero .eyebrow { color: var(--ink-2); }
-.hero__lede { color: var(--ink-2); max-width: none; }
-.hero__scroll { color: rgba(245,243,238,0.9); text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
-.hero__title { font-size: clamp(40px, 5.5vw, 76px); line-height: 1.02; }
+.hero .eyebrow { color: rgba(245,243,238,0.85); }
+.hero__title { color: #f5f3ee; font-size: clamp(44px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; max-width: 18ch; }
+.hero__lede { color: rgba(245,243,238,0.92); max-width: 52ch; font-size: clamp(15px, 1.1vw, 17px); }
+.hero__scroll { color: rgba(245,243,238,0.75); }
+.hero .btn--dark { background: #f5f3ee; color: #16181b; border-color: #f5f3ee; }
+.hero .btn--dark:hover { background: #ffffff; color: #000; opacity: 1; }
+.hero .btn--ghost { color: #f5f3ee; border-color: rgba(245,243,238,0.7); }
+.hero .btn--ghost:hover { background: rgba(245,243,238,0.15); opacity: 1; }
 @media (max-width: 720px) {
-  .hero { padding: 100px 16px 60px; }
-  .hero__inner { max-width: 100%; width: 100%; }
+  .hero { padding: 100px 20px 60px; min-height: 88vh; }
 }
 
 /* Softer, warmer typography rules */
