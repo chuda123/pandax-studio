@@ -1178,20 +1178,29 @@ html[lang="zh-CN"] .lp-hero h1 {
   margin-bottom: 18px;
 }
 .hero__title {
-  color: #f5f3ee;
+  color: #ffffff;
   font-family: var(--sans);
   font-weight: 800;
   text-transform: uppercase;
-  font-size: clamp(48px, 7.5vw, 108px);
+  font-size: clamp(52px, 8.2vw, 120px);
   line-height: 0.95;
   letter-spacing: -0.025em;
   max-width: 18ch;
+  /* Edge treatment — subtle dark outline + soft drop shadow for legibility on any bg */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.15),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 12px 60px rgba(0, 0, 0, 0.3);
 }
 html[lang="zh-CN"] .hero__title {
   font-family: "Noto Sans SC", "PingFang SC", "Microsoft Yahei", var(--sans);
   font-weight: 900;
   letter-spacing: 0;
 }
+
+/* Hide the SCROLL indicator — reads as a watermark against wood floor */
+.hero__scroll { display: none !important; }
 .hero__lede { color: rgba(245,243,238,0.92); max-width: 52ch; font-size: clamp(15px, 1.1vw, 17px); }
 .hero__scroll { color: rgba(245,243,238,0.75); }
 .hero .btn--dark { background: #f5f3ee; color: #16181b; border-color: #f5f3ee; }
