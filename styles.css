@@ -1180,18 +1180,15 @@ html[lang="zh-CN"] .lp-hero h1 {
 .hero__title {
   color: #ffffff;
   font-family: var(--sans);
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(52px, 8.2vw, 120px);
-  line-height: 0.95;
-  letter-spacing: -0.025em;
-  max-width: 18ch;
-  /* Pure white letters. Edge definition comes from a soft dark halo behind them, not an outline. */
+  font-size: clamp(40px, 5.6vw, 84px);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  /* Soft, subtle — no outline, just a whisper of shadow so it doesn't disappear on bright areas */
   -webkit-text-stroke: 0;
-  text-shadow:
-    0 2px 12px rgba(0, 0, 0, 0.55),
-    0 8px 32px rgba(0, 0, 0, 0.45),
-    0 20px 80px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.28);
 }
 html[lang="zh-CN"] .hero__title {
   font-family: "Noto Sans SC", "PingFang SC", "Microsoft Yahei", var(--sans);
