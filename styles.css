@@ -1143,8 +1143,31 @@ html[lang="zh-CN"] .process h4 { font-family: var(--serif-cn); }
   box-shadow: none;
   text-shadow: 0 2px 20px rgba(0,0,0,0.35);
 }
-.hero .eyebrow { color: rgba(245,243,238,0.85); }
-.hero__title { color: #f5f3ee; font-size: clamp(44px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; max-width: 18ch; }
+.hero .eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--amber);
+  font-size: clamp(15px, 1.3vw, 19px);
+  text-transform: none;
+  letter-spacing: 0.005em;
+  margin-bottom: 18px;
+}
+.hero__title {
+  color: #f5f3ee;
+  font-family: var(--sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(48px, 7.5vw, 108px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  max-width: 18ch;
+}
+html[lang="zh-CN"] .hero__title {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft Yahei", var(--sans);
+  font-weight: 900;
+  letter-spacing: 0;
+}
 .hero__lede { color: rgba(245,243,238,0.92); max-width: 52ch; font-size: clamp(15px, 1.1vw, 17px); }
 .hero__scroll { color: rgba(245,243,238,0.75); }
 .hero .btn--dark { background: #f5f3ee; color: #16181b; border-color: #f5f3ee; }
