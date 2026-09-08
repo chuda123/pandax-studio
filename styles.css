@@ -1186,12 +1186,12 @@ html[lang="zh-CN"] .lp-hero h1 {
   line-height: 0.95;
   letter-spacing: -0.025em;
   max-width: 18ch;
-  /* Edge treatment — subtle dark outline + soft drop shadow for legibility on any bg */
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+  /* Pure white letters. Edge definition comes from a soft dark halo behind them, not an outline. */
+  -webkit-text-stroke: 0;
   text-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.15),
-    0 4px 24px rgba(0, 0, 0, 0.4),
-    0 12px 60px rgba(0, 0, 0, 0.3);
+    0 2px 12px rgba(0, 0, 0, 0.55),
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 20px 80px rgba(0, 0, 0, 0.35);
 }
 html[lang="zh-CN"] .hero__title {
   font-family: "Noto Sans SC", "PingFang SC", "Microsoft Yahei", var(--sans);
