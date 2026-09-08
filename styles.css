@@ -173,7 +173,7 @@ html[lang="en"] .lang .lang__zh { opacity: .35; }
 }
 html[lang="zh-CN"] .hero__title { font-family: var(--serif-cn); font-weight: 500; }
 .hero__title span { display: block; }
-.hero__title span:nth-child(2) { padding-left: clamp(20px, 8vw, 120px); font-style: italic; color: var(--ink-2); }
+.hero__title span:nth-child(2) { padding-left: clamp(20px, 8vw, 120px); font-style: italic; color: inherit; }
 html[lang="zh-CN"] .hero__title span:nth-child(2) { font-style: normal; }
 
 .hero__lede { max-width: 46ch; color: var(--ink-2); font-size: clamp(15px, 1.4vw, 18px); }
