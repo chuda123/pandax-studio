@@ -125,12 +125,13 @@ html[lang="en"] .lang .lang__zh { opacity: .35; }
   display: flex; align-items: flex-end;
   padding: 120px var(--pad) 80px;
   overflow: hidden;
+  color: #f5f3ee;
 }
 .hero__bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(1200px 700px at 78% 30%, rgba(180,138,92,0.12), transparent 60%),
-    linear-gradient(180deg, #ecebe4 0%, #d9d6cc 55%, #b9b7ae 100%);
+    linear-gradient(180deg, rgba(15,16,18,0.35) 0%, rgba(15,16,18,0.55) 50%, rgba(15,16,18,0.85) 100%),
+    url("assets/systems/steel/hero.jpg") center / cover no-repeat;
   z-index: -2;
 }
 .hero__bg::after {
@@ -138,7 +139,7 @@ html[lang="en"] .lang .lang__zh { opacity: .35; }
   position: absolute; inset: 0;
   background:
     repeating-linear-gradient(90deg,
-      rgba(255,255,255,0.06) 0 2px,
+      rgba(255,255,255,0.02) 0 2px,
       transparent 2px 6px),
     radial-gradient(circle at 30% 60%, rgba(0,0,0,0.08), transparent 55%);
   mix-blend-mode: overlay;
@@ -1124,3 +1125,25 @@ html[lang="zh-CN"] .process h4 { font-family: var(--serif-cn); }
 @media (max-width: 600px) {
   .lp-list li { grid-template-columns: 1fr; gap: 8px; }
 }
+
+/* Hero over image bg — text overrides */
+.hero .eyebrow { color: rgba(245,243,238,.75); }
+.hero__title { color: #f5f3ee; }
+.hero__lede { color: rgba(245,243,238,.85); }
+.hero__scroll { color: rgba(245,243,238,.7); }
+.hero .btn--dark { background: #f5f3ee; color: #16181b; border-color: #f5f3ee; }
+.hero .btn--dark:hover { background: #ffffff; color: #000; opacity: 1; }
+.hero .btn--ghost { color: #f5f3ee; border-color: rgba(245,243,238,.6); }
+.hero .btn--ghost:hover { background: rgba(245,243,238,.1); opacity: 1; }
+
+/* Studio section image */
+.studio__media {
+  min-height: 460px;
+  background: url("assets/systems/veneer/foyer.jpg") center / cover no-repeat;
+  background-color: var(--bg-soft);
+}
+@media (max-width: 800px) { .studio__media { min-height: 300px; } }
+
+/* Highlighted "signature" system card variant (Steel now leads) */
+.system__brand:has-text { }
+.system--dark .system__brand { color: rgba(245,243,238,.85); }

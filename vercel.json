@@ -1,4 +1,14 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/radar",
+      "destination": "https://pandax-lead-radar.vercel.app/radar"
+    },
+    {
+      "source": "/radar/:path*",
+      "destination": "https://pandax-lead-radar.vercel.app/radar/:path*"
+    }
+  ]
 }
