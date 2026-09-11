@@ -696,9 +696,9 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
 }
 .system__img:hover { opacity: 1; }
 .system:hover .system__img { transform: scale(1.01); }
-.system__img--hesheng   { background-image: url("assets/brands/web/hesheng.jpg"); }
+.system__img--hesheng   { background-image: url("assets/brands/web/hesheng.jpg?v=2"); }
 .system__img--youjubang { background-image: url("assets/brands/web/youjubang.jpg"); }
-.system__img--rumusan   { background-image: url("assets/brands/web/rumusan.jpg?v=2"); }
+.system__img--rumusan   { background-image: url("assets/brands/web/rumusan.jpg?v=3"); }
 
 .system__body {
   padding: clamp(36px, 4.5vw, 64px);
@@ -883,10 +883,10 @@ html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: norm
 .room__img--kitchen  { background-image: url("assets/case-huang/web/page-06.jpg"); }
 .room__img--dining   { background-image: url("assets/case-huang/web/page-07.jpg"); }
 .room__img--living   { background-image: url("assets/case-huang/web/page-09.jpg"); }
-.room__img--corridor { background-image: url("assets/case-huang/web/page-11.jpg"); }
+.room__img--corridor { background-image: url("assets/case-huang/web/page-11.jpg?v=2"); }
 .room__img--hall     { background-image: url("assets/case-huang/web/page-12.jpg"); }
-.room__img--master   { background-image: url("assets/case-huang/web/page-13.jpg"); }
-.room__img--bath     { background-image: url("assets/case-huang/web/page-16.jpg"); }
+.room__img--master   { background-image: url("assets/case-huang/web/page-13.jpg?v=2"); }
+.room__img--bath     { background-image: url("assets/case-huang/web/page-16.jpg?v=2"); }
 
 @media (max-width: 1000px) {
   .case__head { grid-template-columns: 1fr; }
