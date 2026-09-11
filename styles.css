@@ -886,7 +886,7 @@ html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: norm
 .room__img--living   { background-image: url("assets/case-huang/web/page-09.jpg"); }
 .room__img--corridor { background-image: url("assets/case-huang/web/page-11.jpg?v=2"); }
 .room__img--hall     { background-image: url("assets/case-huang/web/page-12.jpg"); }
-.room__img--master   { background-image: url("assets/case-huang/web/page-13.jpg?v=2"); }
+.room__img--master   { background-image: url("assets/case-huang/web/page-13.jpg?v=3"); }
 .room__img--bath     { background-image: url("assets/case-huang/web/page-16.jpg?v=2"); }
 
 @media (max-width: 1000px) {
