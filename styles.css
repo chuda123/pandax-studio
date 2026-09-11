@@ -1317,7 +1317,7 @@ body { font-feature-settings: "ss01","kern","liga"; letter-spacing: 0.005em; }
 /* Studio section — whole-home interior */
 .studio__media {
   min-height: 460px;
-  background: url("assets/systems/veneer/foyer.jpg?v=4") center / cover no-repeat;
+  background: url("assets/systems/timber/living.jpg?v=1") center / cover no-repeat;
   background-color: var(--bg-soft);
 }
 @media (max-width: 800px) { .studio__media { min-height: 300px; } }
