@@ -1181,12 +1181,19 @@ html[lang="zh-CN"] .lp-hero h1 {
   gap: 18px;
 }
 .lp-list li {
-  padding: 20px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 64px 140px 1fr;
   gap: 24px;
-  align-items: baseline;
+  align-items: center;
+}
+.lp-list__thumb {
+  width: 140px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-soft);
 }
 .lp-section--dark .lp-list li { border-color: rgba(255,255,255,.1); }
 .lp-list__label {
@@ -1202,7 +1209,8 @@ html[lang="zh-CN"] .lp-hero h1 {
 }
 .lp-section--dark .lp-list__text { color: rgba(233,231,224,.75); }
 @media (max-width: 600px) {
-  .lp-list li { grid-template-columns: 1fr; gap: 8px; }
+  .lp-list li { grid-template-columns: 48px 1fr; gap: 12px; }
+  .lp-list__thumb { grid-column: 1 / -1; width: 100%; height: 140px; }
 }
 
 /* Hero — text overlaid directly on image, meerkathome-style */
