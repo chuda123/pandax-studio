@@ -697,7 +697,7 @@ html[lang="zh-CN"] .project h3 { font-family: var(--serif-cn); }
 .system__img:hover { opacity: 1; }
 .system:hover .system__img { transform: scale(1.01); }
 .system__img--hesheng   { background-image: url("assets/brands/web/hesheng.jpg?v=2"); }
-.system__img--youjubang { background-image: url("assets/brands/web/youjubang.jpg"); }
+.system__img--youjubang { background-image: url("assets/brands/web/youjubang.jpg?v=2"); }
 .system__img--rumusan   { background-image: url("assets/brands/web/rumusan.jpg?v=3"); }
 
 .system__body {
