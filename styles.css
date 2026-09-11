@@ -1314,20 +1314,10 @@ body { font-feature-settings: "ss01","kern","liga"; letter-spacing: 0.005em; }
 }
 
 
-/* Studio section image */
+/* Studio section — whole-home interior */
 .studio__media {
   min-height: 460px;
-  background: url("assets/systems/veneer/foyer.jpg?v=3") center / cover no-repeat;
-  background-color: var(--bg-soft);
-}
-@media (max-width: 800px) { .studio__media { min-height: 300px; } }
-
-.system--dark .system__brand { color: rgba(245,243,238,.85); }
-
-/* Studio section image */
-.studio__media {
-  min-height: 460px;
-  background: url("assets/systems/veneer/foyer.jpg") center / cover no-repeat;
+  background: url("assets/systems/veneer/foyer.jpg?v=4") center / cover no-repeat;
   background-color: var(--bg-soft);
 }
 @media (max-width: 800px) { .studio__media { min-height: 300px; } }
