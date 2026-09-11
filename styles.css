@@ -930,13 +930,25 @@ html[lang="zh-CN"] .room__quote { font-family: var(--serif-cn); font-style: norm
   border-left: 1px solid var(--line);
 }
 .process li {
-  padding: 40px;
+  padding: 0;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: background .3s ease;
 }
 .process li:hover { background: var(--bg-soft); }
+.process__thumb {
+  height: clamp(140px, 14vw, 200px);
+  background-size: cover;
+  background-position: center;
+  background-color: #111;
+  transition: transform .6s ease;
+}
+.process li:hover .process__thumb { transform: scale(1.04); }
+.process__body { padding: clamp(22px, 2.6vw, 36px); }
 .process__num {
   font-family: var(--serif);
   font-size: 34px; line-height: 1;
