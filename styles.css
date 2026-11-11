@@ -1250,33 +1250,33 @@ html[lang="zh-CN"] .lp-hero h1 {
   align-items: flex-end;
   gap: 12px;
 }
-.hero__mark { width: 34px; height: 34px; }
+.hero__mark { width: 42px; height: 42px; }
 .hero__rule {
-  width: 28px;
+  width: 36px;
   height: 1px;
-  background: rgba(246, 243, 236, 0.55);
+  background: rgba(255, 255, 255, 0.7);
 }
 .hero__title {
-  color: #f6f3ec;
+  color: #fff;
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: none;
-  font-size: clamp(32px, 3.4vw, 48px);
-  line-height: 1;
-  letter-spacing: 0.18em;
+  font-size: clamp(52px, 5.6vw, 80px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
   max-width: none;
   margin: 0;
-  padding-right: 0.06em;
+  padding-right: 0.02em;
   -webkit-text-stroke: 0;
   text-shadow: none;
-  font-variation-settings: "opsz" 144, "SOFT" 40, "wght" 400;
+  font-variation-settings: "opsz" 144, "SOFT" 0, "wght" 600, "WONK" 1;
 }
 html[lang="zh-CN"] .hero__title {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.18em;
+  font-weight: 600;
+  letter-spacing: -0.03em;
 }
 @media (max-width: 800px) {
   .hero { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
@@ -1289,7 +1289,7 @@ html[lang="zh-CN"] .hero__title {
     align-items: flex-start;
     margin-bottom: 18px;
   }
-  .hero__title { letter-spacing: 0.08em; font-size: 32px; }
+  .hero__title { letter-spacing: -0.03em; font-size: 44px; }
 }
 .hero__title span { display: inline; padding-left: 0; font-style: normal; }
 .hero__tag {
