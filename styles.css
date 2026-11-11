@@ -170,7 +170,6 @@ html[lang="en"] .lang .lang__zh { opacity: .35; }
   mix-blend-mode: overlay;
 }
 .hero__inner { max-width: var(--max); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
-.hero__brand { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
 .hero__mark { width: 46px; height: 46px; margin: 0; }
 .hero__title {
   font-family: var(--serif);
@@ -1240,23 +1239,57 @@ html[lang="zh-CN"] .lp-hero h1 {
   box-shadow: none;
   text-shadow: none;
 }
+.hero__brand {
+  position: absolute;
+  right: var(--pad);
+  bottom: 76px;
+  z-index: 2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.hero__mark { width: 34px; height: 34px; }
+.hero__rule {
+  width: 28px;
+  height: 1px;
+  background: rgba(246, 243, 236, 0.55);
+}
 .hero__title {
-  color: #f7f4ee;
+  color: #f6f3ec;
   font-family: var(--serif);
+  font-style: italic;
   font-weight: 400;
   text-transform: none;
-  font-size: clamp(40px, 4.6vw, 64px);
+  font-size: clamp(32px, 3.4vw, 48px);
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.18em;
   max-width: none;
   margin: 0;
+  padding-right: 0.06em;
   -webkit-text-stroke: 0;
   text-shadow: none;
+  font-variation-settings: "opsz" 144, "SOFT" 40, "wght" 400;
 }
 html[lang="zh-CN"] .hero__title {
   font-family: var(--serif);
+  font-style: italic;
   font-weight: 400;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.18em;
+}
+@media (max-width: 800px) {
+  .hero { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+  .hero__brand {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+  .hero__title { letter-spacing: 0.08em; font-size: 32px; }
 }
 .hero__title span { display: inline; padding-left: 0; font-style: normal; }
 .hero__tag {
